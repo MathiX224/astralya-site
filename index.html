@@ -8,90 +8,153 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial',sans-serif;
 }
 
 body{
-    background:#0f172a;
-    color:white;
-    text-align:center;
+color:white;
+overflow-x:hidden;
+background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#312e81,#0f172a);
+background-size:400% 400%;
+animation:galaxy 15s ease infinite;
+}
+
+@keyframes galaxy{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background-image:
+radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+radial-gradient(2px 2px at 80px 90px,#38bdf8,transparent),
+radial-gradient(1px 1px at 150px 50px,#fff,transparent),
+radial-gradient(2px 2px at 250px 150px,#38bdf8,transparent);
+background-size:300px 300px;
+animation:starsMove 20s linear infinite;
+}
+
+@keyframes starsMove{
+from{transform:translateY(0);}
+to{transform:translateY(-300px);}
 }
 
 header{
-    padding:80px 20px;
+padding:100px 20px;
+text-align:center;
 }
 
 h1{
-    font-size:70px;
-    color:#38bdf8;
-    text-shadow:0 0 20px #38bdf8;
+font-size:90px;
+color:#38bdf8;
+text-transform:uppercase;
+animation:neon 2s infinite alternate;
+}
+
+@keyframes neon{
+from{
+text-shadow:
+0 0 10px #38bdf8,
+0 0 20px #38bdf8,
+0 0 40px #38bdf8;
+}
+to{
+text-shadow:
+0 0 20px #38bdf8,
+0 0 40px #38bdf8,
+0 0 80px #38bdf8,
+0 0 120px #38bdf8;
+}
 }
 
 .subtitle{
-    font-size:20px;
-    color:#cbd5e1;
-    margin-top:10px;
+font-size:22px;
+margin-top:15px;
+color:#e2e8f0;
 }
 
 .btn{
-    display:inline-block;
-    padding:15px 30px;
-    margin:10px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
+display:inline-block;
+padding:15px 30px;
+margin:10px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
 }
 
 .discord{
-    background:#5865F2;
-    color:white;
+background:#5865F2;
+color:white;
+box-shadow:0 0 20px #5865F2;
 }
 
 .discord:hover{
-    transform:scale(1.05);
+transform:translateY(-5px) scale(1.05);
 }
 
 .vote{
-    background:#38bdf8;
-    color:black;
+background:#38bdf8;
+color:black;
+box-shadow:0 0 20px #38bdf8;
 }
 
 .vote:hover{
-    transform:scale(1.05);
-}
-
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    padding:20px;
-}
-
-.card{
-    background:#1e293b;
-    width:280px;
-    padding:20px;
-    border-radius:15px;
-}
-
-.card h3{
-    color:#38bdf8;
-    margin-bottom:10px;
+transform:translateY(-5px) scale(1.05);
 }
 
 section{
-    margin-top:50px;
+padding:50px 20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+color:#38bdf8;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+width:280px;
+padding:25px;
+border-radius:15px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(56,189,248,0.3);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#38bdf8;
 }
 
 footer{
-    margin-top:50px;
-    padding:20px;
-    background:#020617;
+margin-top:50px;
+padding:20px;
+text-align:center;
+background:rgba(0,0,0,0.3);
 }
 </style>
 
@@ -99,95 +162,81 @@ footer{
 
 <body>
 
-<header>
-    <h1>ASTRALYS</h1>
+<div class="stars"></div>
 
-```
+<header>
+<h1>ASTRALYS</h1>
+
 <p class="subtitle">
-    Bienvenue sur le serveur Astralys !
+Bienvenue sur le serveur Astralys !
 </p>
 
 <a href="https://discord.gg/JAq4qahE2A" class="btn discord" target="_blank">
-    💬 Rejoindre le Discord
+💬 Rejoindre le Discord
 </a>
-```
-
 </header>
 
 <section>
-    <h2>⚔️ Pourquoi rejoindre Astralys ?</h2>
+<h2>⚔️ Pourquoi rejoindre Astralys ?</h2>
 
-```
 <div class="cards">
-    <div class="card">
-        <h3>Aventure</h3>
-        <p>Un monde rempli de défis et d'exploration.</p>
-    </div>
 
-    <div class="card">
-        <h3>Communauté</h3>
-        <p>Une communauté active et accueillante.</p>
-    </div>
-
-    <div class="card">
-        <h3>Événements</h3>
-        <p>Des animations régulières avec récompenses.</p>
-    </div>
+<div class="card">
+<h3>Aventure</h3>
+<p>Explore un univers rempli de défis et de récompenses.</p>
 </div>
-```
 
+<div class="card">
+<h3>Communauté</h3>
+<p>Une communauté active et accueillante.</p>
+</div>
+
+<div class="card">
+<h3>Événements</h3>
+<p>Participe à des événements exclusifs.</p>
+</div>
+
+</div>
 </section>
 
 <section>
-    <h2>🗳️ Vote pour Astralys</h2>
+<h2>🗳️ Vote pour Astralys</h2>
 
-```
 <div class="cards">
 
-    <div class="card">
-        <h3>Vote #1</h3>
-        <a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">
-            Voter
-        </a>
-    </div>
+<div class="card">
+<h3>Vote #1</h3>
+<a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">Voter</a>
+</div>
 
-    <div class="card">
-        <h3>Vote #2</h3>
-        <a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">
-            Voter
-        </a>
-    </div>
+<div class="card">
+<h3>Vote #2</h3>
+<a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">Voter</a>
+</div>
 
-    <div class="card">
-        <h3>Vote #3</h3>
-        <a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">
-            Voter
-        </a>
-    </div>
+<div class="card">
+<h3>Vote #3</h3>
+<a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">Voter</a>
+</div>
 
-    <div class="card">
-        <h3>Vote #4</h3>
-        <a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">
-            Voter
-        </a>
-    </div>
+<div class="card">
+<h3>Vote #4</h3>
+<a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">Voter</a>
+</div>
 
-    <div class="card">
-        <h3>Vote #5</h3>
-        <a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">
-            Voter
-        </a>
-    </div>
+<div class="card">
+<h3>Vote #5</h3>
+<a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">Voter</a>
+</div>
 
 </div>
-```
-
 </section>
 
 <footer>
-    © 2026 ASTRALYS - Tous droits réservés
+© 2026 ASTRALYS - Tous droits réservés
 </footer>
 
 </body>
 </html>
+
 
