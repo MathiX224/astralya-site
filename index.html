@@ -4,7 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ASTRALYS</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
 
 <style>
 
@@ -16,7 +20,7 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(-45deg,#060818,#0f172a,#1e1b4b,#312e81,#0f172a);
+background:linear-gradient(-45deg,#050816,#0f172a,#1e1b4b,#312e81,#050816);
 background-size:400% 400%;
 animation:galaxy 15s ease infinite;
 color:white;
@@ -39,10 +43,10 @@ z-index:-1;
 background-image:
 radial-gradient(2px 2px at 20px 30px,#fff,transparent),
 radial-gradient(2px 2px at 80px 90px,#38bdf8,transparent),
-radial-gradient(2px 2px at 160px 60px,#fff,transparent),
-radial-gradient(2px 2px at 260px 180px,#8b5cf6,transparent);
+radial-gradient(1px 1px at 150px 50px,#fff,transparent),
+radial-gradient(2px 2px at 250px 150px,#8b5cf6,transparent);
 background-size:300px 300px;
-animation:starsMove 25s linear infinite;
+animation:starsMove 20s linear infinite;
 }
 
 @keyframes starsMove{
@@ -52,11 +56,11 @@ to{transform:translateY(-300px);}
 
 .hero{
 display:flex;
-justify-content:center;
 align-items:center;
-gap:60px;
+justify-content:center;
+gap:30px;
+padding:40px 20px;
 min-height:80vh;
-padding:50px 20px;
 flex-wrap:wrap;
 }
 
@@ -69,9 +73,9 @@ glowLogo 3s ease-in-out infinite;
 }
 
 @keyframes floatLogo{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-25px);}
-100%{transform:translateY(0px);}
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
 }
 
 @keyframes glowLogo{
@@ -93,7 +97,7 @@ drop-shadow(0 0 40px #8b5cf6);
 }
 
 .hero-text{
-max-width:600px;
+max-width:500px;
 }
 
 .hero-text h1{
@@ -104,14 +108,14 @@ text-shadow:
 0 0 20px #38bdf8,
 0 0 40px #38bdf8,
 0 0 80px #38bdf8;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
 padding:15px 30px;
 margin:10px;
-border-radius:12px;
+border-radius:15px;
 text-decoration:none;
 font-weight:bold;
 transition:.3s;
@@ -139,16 +143,16 @@ box-shadow:0 0 20px #38bdf8;
 transform:translateY(-5px) scale(1.05);
 }
 
+section{
+padding:60px 20px;
+}
+
 .section-title{
 text-align:center;
 font-size:40px;
 color:#38bdf8;
 margin-bottom:40px;
 text-shadow:0 0 20px #38bdf8;
-}
-
-section{
-padding:60px 20px;
 }
 
 .cards{
@@ -184,7 +188,6 @@ text-align:center;
 padding:30px;
 margin-top:50px;
 background:rgba(0,0,0,.3);
-border-top:1px solid rgba(255,255,255,.1);
 }
 
 @media(max-width:900px){
@@ -194,18 +197,17 @@ flex-direction:column;
 text-align:center;
 }
 
-.hero-text h1{
-font-size:70px;
-}
-
 .logo{
 width:320px;
+}
+
+.hero-text h1{
+font-size:70px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -245,30 +247,22 @@ class="btn rules">
 
 <div class="card">
 <h3>🌍 Survie</h3>
-<p>
-Explore un monde unique rempli d'aventures et de mystères.
-</p>
+<p>Explore un monde rempli d'aventures et de défis.</p>
 </div>
 
 <div class="card">
 <h3>💰 Économie</h3>
-<p>
-Développe ta richesse grâce aux commerces et échanges.
-</p>
+<p>Développe ta richesse grâce aux commerces et échanges.</p>
 </div>
 
 <div class="card">
 <h3>🏰 Claims</h3>
-<p>
-Protège tes constructions et agrandis ton territoire.
-</p>
+<p>Protège tes constructions et agrandis ton territoire.</p>
 </div>
 
 <div class="card">
 <h3>🎉 Événements</h3>
-<p>
-Participe à des événements exclusifs et gagne des récompenses.
-</p>
+<p>Participe à des événements exclusifs et gagne des récompenses.</p>
 </div>
 
 </div>
@@ -285,47 +279,27 @@ Participe à des événements exclusifs et gagne des récompenses.
 
 <div class="card">
 <h3>Vote #1</h3>
-<a href="https://serveur-minecraft.com/5643"
-class="btn vote"
-target="_blank">
-Voter
-</a>
+<a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #2</h3>
-<a href="https://www.serveursminecraft.org/serveur/7618"
-class="btn vote"
-target="_blank">
-Voter
-</a>
+<a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #3</h3>
-<a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679"
-class="btn vote"
-target="_blank">
-Voter
-</a>
+<a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #4</h3>
-<a href="https://serveur-prive.net/minecraft/minephoria"
-class="btn vote"
-target="_blank">
-Voter
-</a>
+<a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #5</h3>
-<a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd"
-class="btn vote"
-target="_blank">
-Voter
-</a>
+<a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">Voter</a>
 </div>
 
 </div>
@@ -333,10 +307,8 @@ Voter
 </section>
 
 <footer>
-
 © 2026 ASTRALYS - Tous droits réservés<br>
 Développement et design du site par <strong>MathiX</strong>
-
 </footer>
 
 </body>
